@@ -228,6 +228,7 @@ class TuyaAPI:
       "passwd": self._enc_password(token_info["publicKey"], token_info["exponent"], self._password),
       "token": token_info["token"],
     }
+    time.sleep(1)
     login_info = self._api({"action": "tuya.m.user.email.password.login"}, payload, requires_sid=False, do_not_relogin=True)
     self.sid = login_info["sid"]
   

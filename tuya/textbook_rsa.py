@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-#
 # ===================================================================
 # Textbook RSA - Encryption only
 #
@@ -27,11 +25,9 @@
 
 from Crypto.Signature.pss import MGF1
 import Crypto.Hash.SHA1
-
-from Crypto.Util.py3compat import bord, _copy_bytes
+from Crypto.Util.py3compat import _copy_bytes
 import Crypto.Util.number
-from   Crypto.Util.number import ceil_div, bytes_to_long, long_to_bytes
-from   Crypto.Util.strxor import strxor
+from Crypto.Util.number import bytes_to_long, long_to_bytes
 from Crypto import Random
 
 import struct
